@@ -1,0 +1,78 @@
+@import 'functions';
+
+@import 'variables';
+
+@import 'vendors';
+
+@import 'components';
+
+body {
+	transition: all .15s;
+	&.login {
+		margin: 0 !important;
+	}
+
+	margin-left: 230px;
+
+	@include media-breakpoint-down (sm) {
+		margin-top: 0px;
+		margin-left: 0;
+	}
+	&.is-hide {
+		margin-left: 0px !important;
+	}
+	&.is-show {
+		// margin-left: 230px !important;
+	}
+
+}
+
+.is-fullheight {
+	height: 100vh;
+}
+
+.abs-center {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.row {
+	transition: .3s;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.data-filter {
+	.filter-entries{
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+		}
+	}
+	.filter-search {
+		text-align: right;
+		@include media-breakpoint-down (sm) {
+			margin-top: 10px;
+			text-align: center;
+		}
+	}
+}
+
+.select2 {
+	width: 100% !important;
+}
+
+.chart-container {
+	position: relative;
+	margin: auto;
+	height: 200px;
+}
+
+.card-main .table {
+	table-layout: fixed !important;
+}

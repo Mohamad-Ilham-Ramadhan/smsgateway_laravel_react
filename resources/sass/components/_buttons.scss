@@ -1,0 +1,20 @@
+.btn {
+	box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.15);
+
+	&:hover {
+		box-shadow: 1px 1px 11px 0px rgba(0,0,0,0.25);
+	}
+}
+.btn-default {
+	color: $navy !important;
+	background: #fff;
+    // box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.15);
+    border-radius: 5px;
+}
+
+.btn-rounded {
+	border-radius: 50% !important;
+	width: 30px;
+	height: 30px;
+	padding: .25rem .5rem !important;  
+}

@@ -1,0 +1,64 @@
+.flash-message {
+    position: fixed;
+    display: none;
+    opacity: 0;
+    top: 20%;
+    left: 0;
+    right: 0;
+    width: 500px;
+    text-align: center;
+    background: #cc3300;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15), 0 1px 5px 0 rgba(0, 0, 0, .25);
+    padding: 10px 30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 3px;
+    transition: .5s;   
+    transform: scale(0.95);
+    z-index: 1000;
+
+    &.flash-message-success {
+        background: #8da85e;
+    }
+    &.flash-message-warning {
+        background: #f0ad4e;
+    }
+    &.flash-message-info {
+        background: #5fb6f5;
+    }
+
+    &.is-show {
+        display: block !important;
+    }
+    &.in {
+        opacity: 1;
+        transform: scale(1);
+    }
+    &.out {
+        opacity: 0;
+        transform: sclale(.95);
+    }
+
+    .close {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        cursor: pointer;
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        color: #ffffff78;
+        font-size: 1.4rem;
+        font-weight: bold;
+
+        &:hover {
+            color: #ffffffc4;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+

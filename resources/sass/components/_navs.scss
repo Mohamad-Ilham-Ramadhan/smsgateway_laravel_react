@@ -1,0 +1,18 @@
+.nav-submenu {
+	background: $gray-200;
+
+	.nav-link {
+		padding: .6rem 1rem !important;
+		font-size: .75rem !important;
+		border-bottom: none !important;
+
+		&:hover {
+			background: inherit !important;
+			color: $gray-100;
+		}
+
+		span {
+			font-size: .7rem;
+		}
+	}
+}

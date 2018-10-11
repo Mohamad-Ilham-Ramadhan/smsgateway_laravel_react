@@ -1,0 +1,137 @@
+.navbar-main {
+	color: #fff;
+	padding: 8px 0;
+	font-size: .8rem;
+	line-height: 1rem;
+	background: transparent;
+	padding-left: 30px;
+	padding-right: 30px;
+	transition: all .3s;
+
+	@include media-breakpoint-down(sm) { 
+		&.is-show {
+			margin-left: 230px;
+		}
+	}
+
+	.navbar-brand {
+		margin-right: 0;
+		padding: 0;
+		transition: .3s;
+
+		a {
+			font-size: 1.2rem;
+			background: lighten($primary, 15%);
+			width: 230px;
+			display: inline-block;
+			position: relative;
+			transition: all .3s;
+		}
+		span {
+			img {
+				width: 30px;
+				position: absolute;
+				top: 25%;
+			}
+		}
+		@include media-breakpoint-down(sm) { 
+			width: 100%;
+
+			a {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	.img-user {
+		margin-top: -4px;
+		margin-right: 4px;
+	}
+
+	.nav-link {
+		font-size: .8rem;
+		position: relative;
+		color: $navy;
+		border-radius: 50%;
+		margin-left: 10px;		
+		&:hover {
+			text-decoration: none;
+		}
+
+		&.nav-link-notif {
+			.notif-badge {
+				top: -5px;
+			    left: -15px;
+			}
+		}
+	}
+
+	.dropdown-toggle::after {
+		display:none;
+	}
+
+	.navbar-burger {
+		color: #00356b;
+		cursor: pointer;
+		display: block;
+		position: relative;
+		// width: 30px;
+		// height: 30px;
+		// padding: 1rem;
+		// border-radius: 50%;
+		// background: white;
+		// box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.15);
+
+		&:before {
+			content: 'v';
+			visibility: hidden;
+		}
+
+		&:hover {
+			background: #fff;
+			color: $gray-900;
+		}
+
+		&.is-active {
+			@include media-breakpoint-down (sm) {
+				span:nth-child(1) {
+					transform: translateY(5px) rotate(45deg);
+				}
+				span:nth-child(2) {
+					opacity: 0;
+				}
+				span:nth-child(3) {
+					transform: translateY(-5px) rotate(-45deg);
+				}	
+			}
+		}
+
+		span {
+			background-color: currentColor;
+			display: block;
+			height: 1px;
+			left: calc(50% - 5px);
+			position: absolute;
+			-webkit-transform-origin: center;
+			transform-origin: center;
+			transition-duration: 86ms;
+			transition-property: background-color,opacity,-webkit-transform;
+			transition-property: background-color,opacity,transform;
+			transition-property: background-color,opacity,transform,-webkit-transform;
+			transition-timing-function: ease-out;
+			width: 10px;
+
+			&:nth-child(1) {
+				top: calc(50% - 5px);
+			}
+			&:nth-child(2) {
+				top: calc(50% - 1px);
+			}
+			&:nth-child(3) {
+				top: calc(50% + 3px);
+			}
+		}
+	}
+
+}

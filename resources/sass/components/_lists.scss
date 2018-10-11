@@ -1,0 +1,65 @@
+.contact-cart {
+
+	.contact-cart-icon {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -15px;
+		background: #52a746;
+		width: 200px;
+		margin-right: auto;
+		margin-left: auto;
+		border-radius: 5px;
+		color: #fff;
+		font-size: .9rem;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: 5px solid #52a746;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	.contact-cart-list {
+		border: 1px dashed #52a746;
+		border-radius: 5px;
+		padding: 1rem;
+
+		li {
+			display: inline-block;
+			font-size: .9rem;
+			padding: .2rem .4rem;
+			margin: .2rem;
+			border-radius: 5px;
+			background: #52a746;
+			color: #fff;
+			list-style-type: none;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+
+			.del {
+				font-size: 1.2rem;
+				position: relative;
+				top: 1px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

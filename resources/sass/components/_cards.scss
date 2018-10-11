@@ -1,0 +1,75 @@
+.card {
+	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.15);
+	border-radius: .8rem;
+	overflow: hidden; 
+	padding: .9rem;
+}
+
+.card-info {
+	color: #fff;
+	border: none;
+
+	.card-body {
+		padding: .6rem 1rem;
+	}
+
+	.card-info-icon {
+		position: absolute;
+		right: 15px;
+		top: 24%;
+		font-size: 2.5rem;
+		color: rgba(132, 132, 132, 0.46);
+	}
+}
+
+.card-main {
+
+	.card-title {
+		border-bottom: 1px solid $gray-200;
+	    padding: .4rem .5rem;
+	}
+	.card-footer {
+		padding: .6rem 1rem;
+		background: #fff;
+	}
+	
+	.form-control[readonly] {
+		background: #fff;
+	}
+	
+	// this class is specific for inbox card on dashboard
+	.message {
+		position: relative;
+
+		.message-icon {
+			position: absolute;
+			margin-top: auto;
+			margin-bottom: auto;
+			top: 0;
+			bottom: 0;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			span {
+				font-size: 1.5rem;
+			}
+		}
+
+		.message-contact {
+			font-size: .8rem;
+
+			.message-date {
+				color: $gray-500;
+				font-size: .7rem;
+			}
+		}
+		.message-text {
+			font-size: .9rem;
+		}
+	}
+}
