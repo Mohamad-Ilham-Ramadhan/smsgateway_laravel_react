@@ -13,4 +13,12 @@ let mix = require('laravel-mix');
 
 mix.react('resources/js/app.js', 'public/js')
    .sass('resources/sass/404.sass', 'public/css')
-   .sass('resources/sass/main.scss', 'public/css');
+   .sass('resources/sass/main.scss', 'public/css')
+   .webpackConfig({
+   	resolve: {
+   		extensions:['.js', 'jsx'],
+   		alias: {
+   			'@': __dirname + '/resources/js'
+   		}
+   	}
+   });
