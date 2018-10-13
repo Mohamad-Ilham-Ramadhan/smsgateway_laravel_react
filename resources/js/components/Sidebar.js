@@ -4,6 +4,13 @@ import Collapse from '@/components/Collapse';
 
 class Sidebar extends React.Component {
 
+	toggleCollapseCaret = (e) => {
+		const toggler = e.target.closest('.collapsed');
+		if ( toggler ) {
+			toggler.classList.toggle('is-active');
+		}
+	}
+
 	render() {
 	    return (
 		<nav className="nav sidebar-nav flex-column flex-nowrap" id="sidebarOffcanvas">
@@ -12,21 +19,20 @@ class Sidebar extends React.Component {
 			</div>
 
 			<a href="dashboard" className="nav-link"><span className="fas fa-tachometer-alt mr-2"></span>Dashboard</a>
-			<a data-target="#sendSMSSubmenu" className="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-menu">
+			<a ref={(node) => {this.sendSMSSubmenuToggler = node;} } onClick={ (e) => { this.toggleCollapseCaret(e) } } id="sendSMSSubmenuToggler" data-target="#sendSMSSubmenu" className="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-menu">
 				<span className="fas fa-paper-plane mr-2"></span>
 				Send SMS
 				<span className="caret fas fa-chevron-left float-right"></span>
 			</a>
-			<Collapse >
-				<div>ganteng</div>
+			<Collapse toggler='#sendSMSSubmenuToggler'>
+				<div className="collapse" id="sendSMSSubmenu" data-parent="#sidebarOffcanvas">
+					<nav className="nav nav-submenu flex-column flex-nowrap">
+						<a href="sms/single/create" className="nav-link"><span className="far fa-circle ml-3 mr-2"></span>Single SMS</a>
+						<a href="sms/group/create" className="nav-link"><span className="far fa-circle ml-3 mr-2"></span>Group SMS</a>
+						<a href="autoreply" className="nav-link"><span className="far fa-circle ml-3 mr-2"></span>Autoreply</a>
+					</nav>		
+				</div>
 			</Collapse>
-			<div className="collapse" id="sendSMSSubmenu" data-parent="#sidebarOffcanvas">
-				<nav className="nav nav-submenu flex-column flex-nowrap">
-					<a href="sms/single/create" className="nav-link"><span className="far fa-circle ml-3 mr-2"></span>Single SMS</a>
-					<a href="sms/group/create" className="nav-link"><span className="far fa-circle ml-3 mr-2"></span>Group SMS</a>
-					<a href="autoreply" className="nav-link"><span className="far fa-circle ml-3 mr-2"></span>Autoreply</a>
-				</nav>		
-			</div>
 			<a href="inbox" className="nav-link"><span className="fas fa-envelope mr-2"></span>Inbox 
 				<span id="totalNewInboxsSidebar" className="float-right">
 					<span className="badge badge-rounded badge-info bg-aqua position-relative">
