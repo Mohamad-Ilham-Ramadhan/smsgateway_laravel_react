@@ -48,7 +48,7 @@ class Navbar extends Component {
 						</a>
 						<div class="dropdown-menu dropdown-menu-user dropdown-menu-right">
 							<div>
-								<img src="{{ base_url() }}public/img/avatar5.png" class="img img-thumbnail img-circle" alt=""/>
+								<img src="img/avatar5.png" class="img img-thumbnail img-circle" alt=""/>
 								<div class="name">Name: </div>
 								<div class="privilege">Privilege: </div>
 								<div class="d-flex justify-content-between px-2 bg-white pt-2 pb-2">
