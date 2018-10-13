@@ -6,6 +6,7 @@ import Login from '@/components/pages/Login';
 import Dashboard from '@/components/pages/Dashboard';
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 
 class Root extends React.Component {
@@ -38,11 +39,14 @@ class Root extends React.Component {
         const { isHideSidebar, isShowSidebar } = this.state;
         return (
             <BrowserRouter>
-            	<div>
+            	<React.Fragment>
                     <Navbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
                     <Sidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
-            		<Route path='/dashboard' component={Dashboard} />
-            	</div>
+
+                    <Route path='/dashboard' component={Dashboard} />
+
+                    <Footer />
+            	</React.Fragment>
             </BrowserRouter>
         );
     }
