@@ -25,6 +25,13 @@ body {
 		// margin-left: 230px !important;
 	}
 
+	&.no-match {
+		margin: 0 !important;
+		background-image: url('/svg/404.svg');
+		background-size: cover;
+		background-position: center;
+	}
+
 }
 
 .is-fullheight {

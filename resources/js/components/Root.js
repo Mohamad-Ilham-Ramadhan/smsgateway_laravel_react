@@ -1,9 +1,15 @@
 import React from 'react';
+import { Provider, connect } from 'react-redux';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom';
 
-import Login from '@/components/pages/Login';
-import Dashboard from '@/components/pages/Dashboard';
+import routes from '@/routes';
+
+import store from '@/configureStore';
+
+import NoMatch from '@/components/pages/NoMatch';
+
+// partials
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -36,17 +42,19 @@ class Root extends React.Component {
     }
 
     render() {
-        const { isHideSidebar, isShowSidebar } = this.state;
+        const { isHideSidebar, isShowSidebar, noMatch } = this.state;
+        const routeComponents = routes.map( (route, key) => <Route exact path={route.path} component={route.component} key={key}/> );
         return (
             <BrowserRouter>
-            	<React.Fragment>
-                    <Navbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
-                    <Sidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
-
-                    <Route path='/dashboard' component={Dashboard} />
-
+                <React.Fragment>
+                        <Sidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
+                        <Navbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
+                        <Switch>
+                            {routeComponents}
+                            <Route component={NoMatch} />
+                        </Switch>
                     <Footer />
-            	</React.Fragment>
+                </React.Fragment>
             </BrowserRouter>
         );
     }
@@ -56,5 +64,9 @@ export default Root;
 
 
 if (document.getElementById('app')) {
-    ReactDOM.render(<Root />, document.getElementById('app'));
+    ReactDOM.render(
+        <Provider store={store}>
+            <Root />
+        </Provider>,
+        document.getElementById('app'));
 }

@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/{pages}', function () {
     return view('app');
-});
+})->where('pages', '.*');
+
 
 

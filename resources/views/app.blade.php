@@ -7,11 +7,11 @@
 
 	<title>SMS Gateway</title>
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body class="position-relative bg-gray-200" style="height: 100%">
 	<div id="app" class="position-relative" style="min-height: 100%"></div>
 
-	<script src="js/app.js"></script>
+	<script src="/js/app.js"></script>
 </body>
 </html>
