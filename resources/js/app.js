@@ -14,3 +14,4 @@ require('./bootstrap');
  */
 
 require('./components/Root');
+require('./components/pages/Login');
