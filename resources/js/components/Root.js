@@ -49,10 +49,12 @@ class Root extends React.Component {
                 <React.Fragment>
                         <Sidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
                         <Navbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
-                        <Switch>
-                            {routeComponents}
-                            <Route component={NoMatch} />
-                        </Switch>
+                        <div className="container-fluid" style={ {width: 'auto', paddingBottom: '70px'} }>
+                            <Switch>
+                                {routeComponents}
+                                <Route component={NoMatch} />
+                            </Switch>
+                        </div>
                     <Footer />
                 </React.Fragment>
             </BrowserRouter>

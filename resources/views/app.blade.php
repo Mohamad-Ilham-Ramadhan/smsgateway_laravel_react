@@ -13,5 +13,6 @@
 	<div id="app" class="position-relative" style="min-height: 100%"></div>
 
 	<script src="/js/app.js"></script>
+	<script src=""></script>
 </body>
 </html>
