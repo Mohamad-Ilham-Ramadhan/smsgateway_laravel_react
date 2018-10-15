@@ -24,7 +24,6 @@ class NoMatch extends Component {
 	}
 
     render() {
-    	console.log(this.props);
         return (
             <div className="container-fluid">
 				<h1 className="h1 text-center" 

@@ -10,9 +10,9 @@ import store from '@/configureStore';
 import NoMatch from '@/components/pages/NoMatch';
 
 // partials
-import Sidebar from '@/components/Sidebar';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import VisibleSidebar from '@/components/containers/VisibleSidebar';
+import VisibleNavbar from '@/components/containers/VisibleNavbar';
+import VisibleFooter from '@/components/containers/VisibleFooter';
 
 
 class Root extends React.Component {
@@ -47,15 +47,15 @@ class Root extends React.Component {
         return (
             <BrowserRouter>
                 <React.Fragment>
-                        <Sidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
-                        <Navbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
+                        <VisibleSidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
+                        <VisibleNavbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
                         <div className="container-fluid" style={ {width: 'auto', paddingBottom: '70px'} }>
                             <Switch>
                                 {routeComponents}
                                 <Route component={NoMatch} />
                             </Switch>
                         </div>
-                    <Footer />
+                    <VisibleFooter />
                 </React.Fragment>
             </BrowserRouter>
         );
