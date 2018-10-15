@@ -5,7 +5,6 @@ import Chart from 'chart.js';
 class Dashboard extends Component {
 
 	componentDidMount() {
-		console.log(this.chart);
 		var ctxInit = this.chart.getContext('2d')
 		var smsChartInit = new Chart(ctxInit, {
 			type: 'horizontalBar',

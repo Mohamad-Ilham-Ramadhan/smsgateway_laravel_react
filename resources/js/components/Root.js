@@ -36,6 +36,31 @@ class Root extends React.Component {
         }
     }
 
+    componentDidUpdate(prevProps) {
+        const body = document.body;
+
+        if ( prevProps.isSidebarHide !== this.props.isSidebarHide ) {
+            body.classList.remove('is-show-mobile');
+            if ( this.props.isSidebarHide ) {
+                body.classList.add('is-hide');
+            } else {
+                body.classList.remove('is-hide');
+            }
+        }
+
+        if ( prevProps.isSidebarShowMobile !== this.props.isSidebarShowMobile ) {
+            body.classList.remove('is-hide');
+            if ( this.props.isSidebarShowMobile ) {
+                body.classList.add('is-show-mobile');
+            } else {
+                body.classList.remove('is-show-mobile');
+            }
+        }
+
+
+
+    }
+
     render() {
         const routeComponents = routes.map( (route, key) => <Route exact path={route.path} component={route.component} key={key}/> );
         return (
@@ -55,6 +80,15 @@ class Root extends React.Component {
         );
     }
 }
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        isSidebarHide: state.UI.isSidebarHide,
+        isSidebarShowMobile: state.UI.isSidebarShowMobile,
+    }
+}
+
+Root = connect(mapStateToProps)(Root);
 
 export default Root;
 
