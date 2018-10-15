@@ -4,9 +4,13 @@ import Chart from 'chart.js';
 
 class Dashboard extends Component {
 
+	setChart = (node) => {
+		this.chart = node;
+	}
+
 	componentDidMount() {
-		var ctxInit = this.chart.getContext('2d')
-		var smsChartInit = new Chart(ctxInit, {
+		this.ctx = this.chart.getContext('2d')
+		this.smsChart = new Chart(this.ctx, {
 			type: 'horizontalBar',
 			data: {
 				labels: ['Inbox', 'Sent item'],
@@ -32,6 +36,16 @@ class Dashboard extends Component {
 			}
 		});
 	}
+
+	componentWillUnmount() {
+		this.chart = null;
+		this.ctx = null;
+		this.smsChart = null;
+
+		delete this.chart;
+		delete this.ctx;
+		delete this.smsChart;
+	}
   
     render() {
         return (
@@ -46,7 +60,7 @@ class Dashboard extends Component {
 									<div className="card-title">
 										Trafik SMS Bulan Ini
 									</div>
-									<canvas ref={ (chart => this.chart = chart)} height="200px"></canvas>		
+									<canvas ref={this.setChart} height="200px"></canvas>		
 								</div>
 							</div>
 						</div>
