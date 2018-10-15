@@ -9,7 +9,9 @@ let VisibleSidebar = ({noMatch, ...rest}) => {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        noMatch: state.noMatch
+        noMatch: state.route.noMatch,
+        isSidebarHide: state.UI.isSidebarHide,
+	    isSidebarShowMobile: state.UI.isSidebarShowMobile,
     }
 }
 

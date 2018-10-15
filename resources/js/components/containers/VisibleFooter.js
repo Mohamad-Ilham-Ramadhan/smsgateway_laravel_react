@@ -8,7 +8,7 @@ let VisibleFooter = ({noMatch}) => {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        noMatch: state.noMatch
+        noMatch: state.route.noMatch
     }
 }
 

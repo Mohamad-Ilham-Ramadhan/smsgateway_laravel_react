@@ -9,7 +9,7 @@
 	transition: all .3s;
 
 	@include media-breakpoint-down(sm) { 
-		&.is-show {
+		&.is-show-mobile {
 			margin-left: 230px;
 		}
 	}

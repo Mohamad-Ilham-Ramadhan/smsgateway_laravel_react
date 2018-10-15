@@ -1,12 +1,8 @@
-const initialState = { noMatch: false};
+import { combineReducers } from 'redux';
 
-const route = (state = initialState, action) => {
-	switch (action.type) {
-		case 'SET_NO_MATCH':
-			return { ...state, noMatch: action.payload }
-		default:
-			return state;
-	}
-}
+import route from './route';
+import UI from './UI';
 
-export default route;
+const reducers = combineReducers({route, UI});
+
+export default reducers;

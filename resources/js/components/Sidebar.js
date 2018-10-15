@@ -16,9 +16,9 @@ class Sidebar extends React.Component {
 	}
 
 	render() {
-		const { isHide, isShow }  = this.props;
+		const { isSidebarHide, isSidebarShowMobile }  = this.props;
 	    return (
-			<nav className={'nav sidebar-nav flex-column flex-nowrap' + (isHide ? ' is-hide' : '') + (isShow ? ' is-show' : '')} id="sidebarOffcanvas">
+			<nav className={'nav sidebar-nav flex-column flex-nowrap' + (isSidebarHide ? ' is-hide' : '') + (isSidebarShowMobile ? ' is-show-mobile' : '')} id="sidebarOffcanvas">
 				<div role="button" className="nav-link is-heading">Puskesmas Rau 
 					<img src="img/logo.png" alt="" style={{width: '28px'}} />
 				</div>

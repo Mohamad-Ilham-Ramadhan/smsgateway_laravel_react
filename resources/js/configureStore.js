@@ -1,6 +1,8 @@
 import { createStore } from 'redux';
-import route from '@/reducers';
+import reducers from '@/reducers';
 
-const store = createStore(route);
-
+const store = createStore(
+  	reducers, /* preloadedState, */
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );
 export default store;   

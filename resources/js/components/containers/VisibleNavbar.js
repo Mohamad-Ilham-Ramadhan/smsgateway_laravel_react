@@ -8,7 +8,8 @@ let VisibleNavbar = ({noMatch, ...rest}) => {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        noMatch: state.noMatch
+        noMatch: state.route.noMatch,
+        isSidebarShowMobile: state.UI.isSidebarShowMobile
     }
 }
 

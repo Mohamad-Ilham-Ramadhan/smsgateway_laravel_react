@@ -13,9 +13,9 @@ class Navbar extends Component {
 	}
 
     render() {
-    	const { isShow } = this.props;
+    	const { isSidebarShowMobile } = this.props;
         return (
-            <nav className={"navbar navbar-expand-lg navbar-main flex-nowrap" + (isShow ? ' is-show' : '')} id="navbarMain">
+            <nav className={"navbar navbar-expand-lg navbar-main flex-nowrap" + (isSidebarShowMobile ? ' is-show-mobile' : '')} id="navbarMain">
 
 				<ul className="nav">
 					<div onClick={ (e) => { this.props.toggleSidebar(e)} } className="navbar-burger btn btn-default btn-sm btn-rounded" data-target="sidebarOffcanvas">

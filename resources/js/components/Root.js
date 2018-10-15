@@ -17,11 +17,6 @@ import VisibleFooter from '@/components/containers/VisibleFooter';
 
 class Root extends React.Component {
 
-    state = {
-        isHideSidebar: false,
-        isShowSidebar: false,
-    }
-
     toggleSidebar = (e) => {
         e.preventDefault();
         if ( window.innerWidth >= 768) {
@@ -42,13 +37,12 @@ class Root extends React.Component {
     }
 
     render() {
-        const { isHideSidebar, isShowSidebar, noMatch } = this.state;
         const routeComponents = routes.map( (route, key) => <Route exact path={route.path} component={route.component} key={key}/> );
         return (
             <BrowserRouter>
                 <React.Fragment>
-                        <VisibleSidebar isHide={isHideSidebar} isShow={isShowSidebar}/>
-                        <VisibleNavbar isShow={isShowSidebar} toggleSidebar={this.toggleSidebar}/>
+                        <VisibleSidebar />
+                        <VisibleNavbar />
                         <div className="container-fluid" style={ {width: 'auto', paddingBottom: '70px'} }>
                             <Switch>
                                 {routeComponents}
