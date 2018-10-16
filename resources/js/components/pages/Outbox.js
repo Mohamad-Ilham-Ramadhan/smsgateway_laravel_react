@@ -60,7 +60,7 @@ class Outbox extends Component {
 									<th scope="col" style={{width: '70px'}}>ID</th>
 									<th scope="col">Isi SMS</th>
 									<th scope="col" style={ {width: '150px'}}>No Tujuan</th>
-									<th scope="col" style={ {width: '145px'}}>Waktu Terima</th>
+									<th scope="col" style={ {width: '145px'}}>Waktu Kirim</th>
 									<th scope="col" style={ {width: '100px'}}>Action</th>
 								</tr>
 							</thead>
