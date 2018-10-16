@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Card from '@/components/Card';
+import SelectPerPage from '@/components/SelectPerPage';
 
 class Autoreply extends Component {
 
@@ -30,14 +31,9 @@ class Autoreply extends Component {
 									<div className="filter-entries">
 										<form action="{{ base_url() }}autoreply" method="POST">
 											<small>Tampilkan</small>
-											<select id="perPage" name="perPage" className="custom-select custom-select-sm form-control form-control-sm is-small d-inline-block">
-												{/*
-												{% set recordsPerPageOptions = [10, 25, 50, 100] %}
-												{% for option in recordsPerPageOptions %}
-													<option {% if option == per_page %}selected{% endif %} value="{{ option }}">{{ option }}</option>	
-												{% endfor %}
-												*/}
-											</select>
+												<SelectPerPage 
+													recordsPerPageOptions={[10, 25, 50, 100]}
+												/>
 											<small>Baris</small>															
 										</form>													
 									</div>
