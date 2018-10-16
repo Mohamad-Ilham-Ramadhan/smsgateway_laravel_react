@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '@/components/Card';
 import SelectPerPage from '@/components/SelectPerPage';
@@ -14,7 +15,7 @@ class Autoreply extends Component {
 						className='card-main'
 						title="Data Autoreply"
 						extra={
-							<a href="{{ base_url() }}autoreply/create" className="btn btn-primary btn-sm btn-rounded float-right" data-toggle="tooltip" data-placement="top" data-original-title="Add"><i className="fas fa-plus"></i></a>
+							<Link to="/autoreplies/create" className="btn btn-primary btn-sm btn-rounded float-right" data-toggle="tooltip" data-placement="top" data-original-title="Add"><i className="fas fa-plus"></i></Link>
 						}
 						footer={
 							<div className="pagination-wrapper">
