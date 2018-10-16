@@ -45,7 +45,7 @@ class Autoreply extends Component {
 											<form action="{{ base_url() }}autoreply" method="POST">
 													<label htmlFor="">
 													<small>Search:</small>
-													<input id="search" name="search" type="text" placeholder="Keyword..." value="{{ search }}" className="form-control form-control-sm d-inline-block is-medium"/>
+													<input id="search" name="search" type="text" placeholder="Keyword..." defaultValue="{{ search }}" className="form-control form-control-sm d-inline-block is-medium"/>
 														<button className="btn btn-default btn-search btn-sm">
 															<i className="fas fa-search"></i>
 														</button>
@@ -81,7 +81,7 @@ class Autoreply extends Component {
 											
 											<div className="d-inline-block" data-toggle="tooltip" data-placement="top" data-original-title="delete">
 												<form action="{{ base_url() }}autoreply/{{ autoreply.id }}/destroy" method="POST">
-													<input type="hidden" name="{{ csrf_token_name }}" value="{{ csrf_hash }}" />
+													<input type="hidden" name="{{ csrf_token_name }}" defaultValue="{{ csrf_hash }}" />
 													<div className="btn btn-sm btn-danger mx-1" data-toggle="modal" data-target="#autoreplyModalDelete" data-autoreply-id="{{ autoreply.id }}" data-autoreply-keyword="{{ autoreply.keyword }}"><i className="fas fa-trash-alt"></i></div>				
 												</form>
 											</div>
@@ -91,7 +91,7 @@ class Autoreply extends Component {
 							</tbody>
 						</table>
 					</Card>
-					
+
 				</div>
 			</div>
         );
