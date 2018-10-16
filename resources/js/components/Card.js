@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Card = ({ className, title, extra, footer, cardBodyClassName, children }) => {
+const Card = ({ className, title, extra, footer, bodyClassName, children }) => {
     return (
         <div className={"card " + className}>
         	<div className="clearfix">
         		<div className="card-title">{ title }</div>
         		{extra}
         	</div>
-			<div className={"card-body " + cardBodyClassName}>
+			<div className={"card-body " + bodyClassName}>
                 {children}
 			</div>
             { footer && 

@@ -12,7 +12,7 @@ class SendSMSSingle extends Component {
 					<Card
 						className="card-main"
 						title="Kirim SMS Single"
-						cardBodyClassName="px-5"
+						bodyClassName="px-5"
 						footer={
 							<Fragment>
 								<button type="submit" className="btn btn-primary float-left">Kirimkan Pesan</button>
