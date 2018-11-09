@@ -15,7 +15,7 @@ class Autoreply extends Component {
 						className='card-main'
 						title="Data Autoreply"
 						extra={
-							<Link to="/autoreplies/create" className="btn btn-primary btn-sm btn-rounded float-right" data-toggle="tooltip" data-placement="top" data-original-title="Add"><i className="fas fa-plus"></i></Link>
+							<Link to="/group-contacts/create" className="btn btn-primary btn-sm btn-rounded float-right" data-toggle="tooltip" data-placement="top" data-original-title="Add"><i className="fas fa-plus"></i></Link>
 						}
 						footer={
 							<div className="pagination-wrapper">
