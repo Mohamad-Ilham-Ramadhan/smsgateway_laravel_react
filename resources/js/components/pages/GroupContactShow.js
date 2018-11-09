@@ -15,7 +15,7 @@ class GroupContactShow extends Component {
 						className='card-main'
 						title="Pasien yang terdaftar pada group: {...}"
 						extra={
-							<Link to="/group-contacts/create" className="btn btn-primary btn-sm btn-rounded float-right" data-toggle="tooltip" data-placement="top" data-original-title="Add"><i className="fas fa-plus"></i></Link>
+							<Link to="/group-contacts" className="btn btn-primary btn-sm btn-rounded float-right" data-toggle="tooltip" data-placement="top" data-original-title="Add"><i className="far fa-list-alt"></i></Link>
 						}
 						footer={
 							<div className="pagination-wrapper">

@@ -66,8 +66,7 @@ class GroupContact extends Component {
 							<thead>
 								<tr>
 									<th scope="col">Id</th>
-									<th scope="col">Keyword</th>
-									<th scope="col">Reply</th>
+									<th scope="col">Nama Group</th>
 									<th scope="col" style={{width: '200px', textAlign: 'center'}}>Action</th>
 								</tr>
 							</thead>
@@ -75,8 +74,7 @@ class GroupContact extends Component {
 								{/*% for autoreply in autoreplies %*/}
 									<tr>
 										<th scope="row"> autoreply.id </th>
-										<td> autoreply.keyword </td>
-										<td> autoreply.reply </td>
+										<td> groupContact.namaGroup </td>
 										<td className="text-center">
 											<a href="{{ base_url() }}autoreply/{{ autoreply.id }}/edit" className="btn btn-sm btn-success mx-1" data-toggle="tooltip" data-placement="top" data-original-title="edit"><i className="fas fa-edit"></i></a>
 											
