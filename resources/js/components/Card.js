@@ -1,6 +1,6 @@
 import React, { cloneElement } from 'react';
 
-const Card = ({ className = null, title = null, extra = null , footer = null, bodyClassName = null, children }) => {
+const Card = ({ className = '', title = null, extra = null , footer = null, bodyClassName = '', children }) => {
 
     return (
         <div className={"card " + className}>

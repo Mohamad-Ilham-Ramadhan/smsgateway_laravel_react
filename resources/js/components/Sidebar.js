@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
 				</div>
 
 				<Link to="/dashboard" className="nav-link"><span className="fas fa-tachometer-alt mr-2"></span>Dashboard</Link>
-				<a ref={(node) => {this.sendSMSSubmenuToggler = node;} } onClick={ (e) => { this.toggleCollapseCaret(e) } } id="sendSMSSubmenuToggler" data-target="#sendSMSSubmenu" className="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-menu">
+				<a ref={(node) => {this.sendSMSSubmenuToggler = node;} } onClick={ (e) => { this.toggleCollapseCaret(e) } } id="sendSMSSubmenuToggler" className="nav-link collapsed">
 					<span className="fas fa-paper-plane mr-2"></span>
 					Send SMS
 					<span className="caret fas fa-chevron-left float-right"></span>
