@@ -13,7 +13,7 @@ class GroupContactEdit extends Component {
 						title="Edit Data Group Contact"
 						footer={
 							<Fragment>
-								<button className="button btn btn-primary btn-sm float-left">Tambahkan</button>
+								<button className="button btn btn-primary btn-sm float-left">Update</button>
 								<button id="buttonReset" className="button btn btn-warning btn-sm float-right">Reset</button>
 							</Fragment>
 						}
