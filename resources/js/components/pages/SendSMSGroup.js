@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 
-import $ from 'jquery';
 import 'select2/dist/js/select2.js';
 import 'select2/dist/css/select2.css';
 
@@ -8,20 +7,18 @@ import Card from '@/components/Card';
 
 class SendSMSGroup extends Component {
 
-	setRef = (node) => {
-		this.groupContactSelect = node;
+	setGroupContactSelect2Ref = (node) => {
+		this.groupContactSelect2 = node;
 	}
-    
+
     componentDidMount() {
-    	this.$groupContactSelect = $(this.groupContactSelect);
-    	this.$groupContactSelect.select2();
+    	this.$groupContactSelect2 = $(this.groupContactSelect2);
+    	this.$groupContactSelect2.select2();
     }
 
     componentWillUnmount() {
-    	this.groupContactSelect = null
-    	this.$groupContactSelect.remove();
-    	this.$groupContactSelect = null
-    	console.log(this.$groupContactSelect);
+    	this.groupContactSelect2 = null
+    	this.$groupContactSelect2.remove();
     }
 
     render() {
@@ -47,7 +44,7 @@ class SendSMSGroup extends Component {
 									<div className="col-12 col-md-6">
 										<div className="form-group">
 											<label htmlFor="">Pilih Group</label>
-											<select ref={this.setRef} name="group_contacts[]" id="groupContactSelect" className="form-control" multiple="multiple" required>
+											<select ref={this.setGroupContactSelect2Ref} name="group_contacts[]" id="groupContactSelect" className="form-control" multiple="multiple" required>
 												{ /*% for groupContact in group_contacts %}
 													<option className="group-contact-select-option" value="{{ groupContact.id }}">{{ groupContact.nama }}</option>
 												{% endfor % */}
